@@ -34,7 +34,7 @@ void MainWindow::setupMenu()
     ui->menu->addAction(exit);
     connect(importData, &QAction::triggered, this, &MainWindow::importData);
     connect(exportData, &QAction::triggered, this, &MainWindow::exportData);
-//  сonnect(ui->menu, &QMenu::cli)
+    connect(exit, &QAction::triggered, this, &QApplication::quit);
 }
 
 void MainWindow::importData()
